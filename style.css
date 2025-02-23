@@ -62,9 +62,9 @@ nav a.active {
 }
 
 .profile-pic {
-    width: 100%;
-   /* border-radius: 50%; */
-    box-shadow: none;
+    width: 80%; /* Adjust image size */
+    border-radius: 20px; /* Smaller rectangle corners */
+    box-shadow: none; /* Remove the box shadow */
 }
 
 /* Contact Page Styles */
