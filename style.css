@@ -30,6 +30,57 @@ body:not(.home-page):not(.contact-page) {
     background: none;
 }
 
+/* Portfolio Page Layout */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 100px 20px;
+}
+
+.collection-card {
+    width: 300px;
+    text-align: center;
+    margin: 20px;
+}
+
+.collection-card img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.collection-card img:hover {
+    transform: scale(1.05);
+}
+
+/* Collection Page Layout */
+.collection-page {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.artwork img {
+    width: 80%;
+    margin: 20px 0;
+    border-radius: 15px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f4a261;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #e76f51;
+}
+
 /* About Page Background and Text Color */
 .about-page {
     background: #f0f0f0; /* Light gray background */
