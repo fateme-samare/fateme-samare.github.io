@@ -30,6 +30,18 @@ body:not(.home-page):not(.contact-page) {
     background: none;
 }
 
+/* About Page Background and Text Color */
+.about-page {
+    background: #f0f0f0; /* Light gray background */
+    color: black; /* Black text color */
+}
+
+/* Ensure about text is also black */
+.about-text h1, 
+.about-text p {
+    color: black;
+}
+
 
 /* Navigation Bar */
 nav {
