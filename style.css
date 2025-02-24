@@ -101,3 +101,17 @@ nav a.active {
 .contact-content a:hover {
     text-decoration: underline;
 }
+.btn {
+    display: inline-block; /* Allows it to behave like a button */
+    padding: 10px 20px; /* Adds spacing inside the button */
+    background-color: #f4a261; /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline */
+    font-size: 18px; /* Larger text */
+    border-radius: 5px; /* Rounds the corners */
+    transition: background 0.3s ease; /* Smooth hover effect */
+}
+
+.btn:hover {
+    background-color: #e76f51; /* Darker color on hover */
+}
