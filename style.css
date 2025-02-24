@@ -86,7 +86,7 @@ nav a.active {
 
 .profile-pic {
     width: 60%; /* Adjust image size */
-    border-radius: 20px; /* Smaller rectangle corners */
+    border-radius: 10px; /* Smaller rectangle corners */
     box-shadow: none; /* Remove the box shadow */
 }
 
