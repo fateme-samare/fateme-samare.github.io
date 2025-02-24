@@ -87,6 +87,7 @@ nav a.active {
     height: 100vh;
     text-align: center;
     flex-direction: column;
+    z-index: 2
 }
 
 /* Contact Content */
