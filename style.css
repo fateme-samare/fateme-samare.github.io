@@ -45,7 +45,7 @@ body:not(.home-page):not(.contact-page) {
 }
 
 .collection-card img {
-    width: 100%;
+    width: 300%;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s;
@@ -63,9 +63,12 @@ body:not(.home-page):not(.contact-page) {
 
 .artwork img {
     width: 80%;
+    max-width: 800px; /* Ensures image doesn't grow too large */
     margin: 20px 0;
     border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow for depth */
 }
+
 
 .btn {
     display: inline-block;
@@ -200,4 +203,23 @@ nav a.active {
 .contact-content a:hover {
     text-decoration: underline;
 }
-  
+@media (max-width: 768px) {
+    .portfolio-container {
+        flex-direction: column; /* Stacks cards vertically */
+        align-items: center; /* Centers the content */
+    }
+
+    .about-container {
+        flex-direction: column; /* Stack about content */
+        text-align: center; /* Center text */
+    }
+
+    .profile-container {
+        max-width: 80%; /* Increase profile image size */
+    }
+
+    .artwork img {
+        width: 100%; /* Full-width images on small screens */
+    }
+}
+
