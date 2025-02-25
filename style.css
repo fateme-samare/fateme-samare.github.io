@@ -204,6 +204,8 @@ nav a.active {
 .contact-content a:hover {
     text-decoration: underline;
 }
+
+
 @media (max-width: 768px) {
     .portfolio-container {
         flex-direction: column; /* Stacks cards vertically */
@@ -223,4 +225,3 @@ nav a.active {
         width: 100%; /* Full-width images on small screens */
     }
 }
-
