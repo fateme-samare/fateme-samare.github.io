@@ -45,7 +45,8 @@ body:not(.home-page):not(.contact-page) {
 }
 
 .collection-card img {
-    width: 300%;
+    width: 100%;
+    max-width: 300px; /* Optional: Set a max-width for better layout */
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s;
