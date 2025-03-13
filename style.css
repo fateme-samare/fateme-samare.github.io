@@ -176,3 +176,17 @@ nav a.active {
         width: 100%; /* Full-width images on small screens */
     }
 }
+/* Style for Name and Email Section */
+.contact-info h1 {
+    margin-bottom: 20px; /* Adds space below the name */
+}
+
+.contact-info a {
+    color: #f4a261; /* Change email color */
+    text-decoration: none; /* Optional: Remove underline */
+}
+
+.contact-info a:hover {
+    color: #e76f51; /* Optional: Hover color */
+}
+
