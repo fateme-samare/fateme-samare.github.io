@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    <!-- Home Page (highest priority) -->
+    <!-- Home Page -->
     <url>
         <loc>https://fateme-samare.github.io/</loc>
         <priority>1.0</priority>
         <changefreq>weekly</changefreq>
     </url>
 
-    <!-- Portfolio Page (slightly lower priority) -->
+    <!-- Portfolio Page -->
     <url>
         <loc>https://fateme-samare.github.io/portfolio.html</loc>
         <priority>0.8</priority>
         <changefreq>weekly</changefreq>
     </url>
 
-    <!-- About Page (if you want to add it) -->
+    <!-- About Page -->
     <url>
         <loc>https://fateme-samare.github.io/about.html</loc>
         <priority>0.7</priority>
