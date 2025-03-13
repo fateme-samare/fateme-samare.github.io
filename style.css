@@ -157,55 +157,6 @@ nav a.active {
     box-shadow: none; /* Remove the box shadow */
 }
 
-/* Contact Page Styles */
-.contact-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    flex-direction: column;
-    z-index: 2
-}
-
-/* Contact Content */
-
-/* Centered Content for Contact Page */
-.contact-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full viewport height */
-    position: relative; /* Above overlay */
-    z-index: 2;
-    text-align: center;
-}
-
-
-.contact-content h1 {
-    font-size: 50px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-
-.contact-content p {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-
-.contact-content a {
-    color: #f4a261;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.contact-content a:hover {
-    text-decoration: underline;
-}
-
-
 @media (max-width: 768px) {
     .portfolio-container {
         flex-direction: column; /* Stacks cards vertically */
