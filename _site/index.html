@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fateme Samare Hedayatzade - Artist and Designer Portfolio">
+  <meta name="keywords" content="Fateme Samare, Fateme Samare Hedayatzade, Artist, Designer, Portfolio, Art Collections">
+  <meta name="author" content="Fateme Samare Hedayatzade">
+  <title>Fateme Samare Hedayatzade | Artist Portfolio</title>
+
+  <style>
+    /* Reset default margin & padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+      padding: 15px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #f4a261; /* Highlight color */
+    }
+
+    /* Background Image */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-image: url('images/home-background.jpg'); /* Path to your image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+      position: relative;
+    }
+
+    /* Overlay Effect for Better Readability */
+    .overlay {
+      background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+      position: fixed; /* Fixed to cover the entire screen */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    /* Home Content Section */
+    .home-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Full screen */
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .home-content h1 {
+      font-size: 50px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .home-content p {
+      font-size: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #f4a261;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 5px; 
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e76f51;
+    }
+  </style>
+</head>
+<body class="home-page">
+  <!-- Overlay for readability -->
+  <div class="overlay"></div>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Art Works</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <!-- Home Content Section -->
+  <section class="home-content">
+    <h1>Fateme Samare Hedayatzade</h1>
+    <p>
+      <a href="mailto:fateme.samare@gmail.com" style="color: #f4a261; text-decoration: none; font-size: 30px;">fateme.samare@gmail.com</a>
+    </p>
+  </section>
+ 
+</body>
+</html>
