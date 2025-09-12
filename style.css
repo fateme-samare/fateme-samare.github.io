@@ -3,11 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-   /* background: url('images/home-background.jpg') no-repeat center center fixed;*/
-   /* background-size: cover;*/
-    color: white; /* Make sure text is readable */
+    color: white;
 }
-
 
 /* Background for Home and Contact pages */
 .home-page, .contact-page {
@@ -46,7 +43,7 @@ body:not(.home-page):not(.contact-page) {
 
 .collection-card img {
     width: 100%;
-    max-width: 300px; /* Optional: Set a max-width for better layout */
+    max-width: 300px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s;
@@ -64,12 +61,11 @@ body:not(.home-page):not(.contact-page) {
 
 .artwork img {
     width: 80%;
-    max-width: 800px; /* Ensures image doesn't grow too large */
+    max-width: 800px;
     margin: 20px 0;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
 
 .btn {
     display: inline-block;
@@ -87,16 +83,14 @@ body:not(.home-page):not(.contact-page) {
 
 /* About Page Background and Text Color */
 .about-page {
-    background: #f0f0f0; /* Light gray background */
-    color: black; /* Black text color */
+    background: #f0f0f0;
+    color: black;
 }
 
-/* Ensure about text is also black */
 .about-text h1, 
 .about-text p {
     color: black;
 }
-
 
 /* Navigation Bar */
 nav {
@@ -129,11 +123,14 @@ nav a.active {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 100px 50px 50px; /* Adjust for fixed navbar */
+    padding: 100px 50px 50px;
+    gap: 30px;
+    flex-wrap: wrap; /* allow wrapping */
 }
 
 .about-text {
-    max-width: 50%;
+    max-width: 600px;
+    flex: 1;
     text-align: left;
 }
 
@@ -148,45 +145,66 @@ nav a.active {
 }
 
 .profile-container {
-    max-width: 40%;
+    flex: 1;
+    text-align: center;
+    max-width: 400px;
 }
 
 .profile-pic {
-    width: 60%; /* Adjust image size */
-    border-radius: 10px; /* Smaller rectangle corners */
-    box-shadow: none; /* Remove the box shadow */
+    width: 200px;
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto;
+    box-shadow: none;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .portfolio-container {
-        flex-direction: column; /* Stacks cards vertically */
-        align-items: center; /* Centers the content */
+        flex-direction: column;
+        align-items: center;
     }
 
     .about-container {
-        flex-direction: column; /* Stack about content */
-        text-align: center; /* Center text */
+        flex-direction: column;
+        text-align: center;
+        padding: 80px 20px 20px;
+    }
+
+    .about-text {
+        max-width: 100%;
     }
 
     .profile-container {
-        max-width: 80%; /* Increase profile image size */
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .profile-pic {
+        width: 70%;
     }
 
     .artwork img {
-        width: 100%; /* Full-width images on small screens */
+        width: 100%;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 10px;
+        font-size: 16px;
     }
 }
-/* Style for Name and Email Section */
+
+/* Contact Page */
 .contact-info h1 {
-    margin-bottom: 20px; /* Adds space below the name */
+    margin-bottom: 20px;
 }
 
 .contact-info a {
-    color: #f4a261; /* Change email color */
-    text-decoration: none; /* Optional: Remove underline */
+    color: #f4a261;
+    text-decoration: none;
 }
 
 .contact-info a:hover {
-    color: #e76f51; /* Optional: Hover color */
+    color: #e76f51;
 }
-
