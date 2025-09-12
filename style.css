@@ -96,7 +96,7 @@ body:not(.home-page):not(.contact-page) {
 nav {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* ✅ allow wrapping */
+    flex-wrap: wrap;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 15px;
     position: fixed;
@@ -108,7 +108,7 @@ nav {
 
 nav a {
     color: white;
-    margin: 5px 15px; /* ✅ reduced margin for mobile */
+    margin: 5px 15px;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
@@ -123,16 +123,16 @@ nav a.active {
 /* About Page Styles */
 .about-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;   /* align items to the top */
+    justify-content: center;
     padding: 100px 50px 50px;
-    gap: 30px;
-    flex-wrap: wrap;
+    gap: 50px;
+    flex-wrap: nowrap;         /* keep side by side on desktop */
 }
 
 .about-text {
     max-width: 600px;
-    flex: 1;
+    flex: 2;
     text-align: left;
 }
 
@@ -148,13 +148,13 @@ nav a.active {
 
 .profile-container {
     flex: 1;
+    max-width: 250px;
     text-align: center;
-    max-width: 400px;
 }
 
 .profile-pic {
-    width: 200px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 250px;
     border-radius: 10px;
     height: auto;
     box-shadow: none;
@@ -169,6 +169,7 @@ nav a.active {
 
     .about-container {
         flex-direction: column;
+        align-items: center;
         text-align: center;
         padding: 80px 20px 20px;
     }
@@ -178,12 +179,13 @@ nav a.active {
     }
 
     .profile-container {
-        max-width: 100%;
         margin-bottom: 20px;
+        max-width: 100%;
     }
 
     .profile-pic {
         width: 70%;
+        max-width: 200px;
     }
 
     .artwork img {
@@ -191,8 +193,8 @@ nav a.active {
     }
 
     nav a {
-        margin: 8px; /* ✅ smaller spacing */
-        font-size: 16px; /* ✅ smaller font */
+        margin: 8px;
+        font-size: 16px;
     }
 }
 
