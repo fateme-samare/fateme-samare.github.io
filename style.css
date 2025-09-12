@@ -13,13 +13,13 @@ body {
 }
 
 .overlay {
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    position: fixed; /* Cover entire screen */
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Behind content */
+    z-index: 1;
 }
 
 /* Other pages without background */
@@ -94,9 +94,11 @@ body:not(.home-page):not(.contact-page) {
 
 /* Navigation Bar */
 nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* ✅ allow wrapping */
     background-color: rgba(0, 0, 0, 0.8);
     padding: 15px;
-    text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
@@ -106,7 +108,7 @@ nav {
 
 nav a {
     color: white;
-    margin: 0 20px;
+    margin: 5px 15px; /* ✅ reduced margin for mobile */
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
@@ -125,7 +127,7 @@ nav a.active {
     justify-content: space-between;
     padding: 100px 50px 50px;
     gap: 30px;
-    flex-wrap: wrap; /* allow wrapping */
+    flex-wrap: wrap;
 }
 
 .about-text {
@@ -189,9 +191,8 @@ nav a.active {
     }
 
     nav a {
-        display: inline-block;
-        margin: 10px;
-        font-size: 16px;
+        margin: 8px; /* ✅ smaller spacing */
+        font-size: 16px; /* ✅ smaller font */
     }
 }
 
