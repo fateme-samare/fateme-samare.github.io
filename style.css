@@ -57,16 +57,68 @@ body:not(.home-page):not(.contact-page) {
 .collection-page {
     text-align: center;
     padding: 100px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
 .artwork img {
-    width: 80%;
-    max-width: 800px;
-    margin: 20px 0;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 150px; /* Thumbnail size */
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    cursor: pointer;
 }
 
+.artwork img:hover {
+    transform: scale(1.1);
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* Lightbox Navigation Buttons */
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    background: rgba(255,255,255,0.3);
+    border: none;
+    color: white;
+    font-size: 3rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+    transform: translateY(-50%);
+}
+
+#prev { left: 20px; }
+#next { right: 20px; }
+
+.lightbox-nav:hover {
+    background: rgba(255,255,255,0.6);
+}
+
+/* Buttons */
 .btn {
     display: inline-block;
     margin-top: 20px;
@@ -115,19 +167,18 @@ nav a {
     transition: color 0.3s ease-in-out;
 }
 
-/*nav a:hover,
 nav a.active {
     color: #f4a261;
-}*/
+}
 
 /* About Page Styles */
 .about-container {
     display: flex;
-    align-items: flex-start;   /* align items to the top */
+    align-items: flex-start;
     justify-content: center;
     padding: 100px 50px 50px;
     gap: 50px;
-    flex-wrap: nowrap;         /* keep side by side on desktop */
+    flex-wrap: nowrap;
 }
 
 .about-text {
