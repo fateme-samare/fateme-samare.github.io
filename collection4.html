@@ -2,10 +2,35 @@
 <html lang="en">
 
 <head>
-    <title>My Artwork</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection 4 - Artworks</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Lightbox overlay */
+        /* Collection Page Layout */
+        .collection-page {
+            text-align: center;
+            padding: 100px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .artwork img {
+            width: 150px; /* Thumbnail size */
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .artwork img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Lightbox Styles */
         .lightbox {
             display: none;
             position: fixed;
@@ -25,17 +50,31 @@
             border-radius: 10px;
         }
 
-        /* Thumbnail styling */
-        .artwork img {
-            width: 150px; /* Small thumbnail */
-            height: auto;
-            border-radius: 10px;
-            transition: transform 0.3s;
+        /* Lightbox Navigation Buttons */
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            font-size: 3rem;
+            padding: 10px 20px;
             cursor: pointer;
+            user-select: none;
+            border-radius: 5px;
+            transform: translateY(-50%);
         }
 
-        .artwork img:hover {
-            transform: scale(1.1); /* Hover effect */
+        #prev {
+            left: 20px;
+        }
+
+        #next {
+            right: 20px;
+        }
+
+        .lightbox-nav:hover {
+            background: rgba(255, 255, 255, 0.6);
         }
     </style>
 </head>
@@ -50,61 +89,76 @@
 
     <!-- Collection Page -->
     <section class="collection-page">
-     
-
         <!-- Artworks -->
         <div class="artwork" onclick="openLightbox('images/collection4-art1.jpg')">
             <img src="images/collection4-art1.jpg" alt="Artwork 1">
         </div>
-
         <div class="artwork" onclick="openLightbox('images/collection4-art2.jpg')">
             <img src="images/collection4-art2.jpg" alt="Artwork 2">
         </div>
-
         <div class="artwork" onclick="openLightbox('images/collection4-art3.jpg')">
             <img src="images/collection4-art3.jpg" alt="Artwork 3">
         </div>
-
         <div class="artwork" onclick="openLightbox('images/collection4-art4.jpg')">
             <img src="images/collection4-art4.jpg" alt="Artwork 4">
         </div>
-
         <div class="artwork" onclick="openLightbox('images/collection4-art5.jpg')">
             <img src="images/collection4-art5.jpg" alt="Artwork 5">
         </div>
-
         <div class="artwork" onclick="openLightbox('images/collection4-art6.jpg')">
             <img src="images/collection4-art6.jpg" alt="Artwork 6">
         </div>
-
         <div class="artwork" onclick="openLightbox('images/collection4-art7.jpg')">
             <img src="images/collection4-art7.jpg" alt="Artwork 7">
         </div>
-
-
-
-       
     </section>
 
     <!-- Lightbox Container -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button id="prev" class="lightbox-nav">&#10094;</button>
         <img id="lightbox-img" src="" alt="Enlarged Artwork">
+        <button id="next" class="lightbox-nav">&#10095;</button>
     </div>
 
     <!-- JavaScript for Lightbox -->
     <script>
+        const images = [
+            'images/collection4-art1.jpg',
+            'images/collection4-art2.jpg',
+            'images/collection4-art3.jpg',
+            'images/collection4-art4.jpg',
+            'images/collection4-art5.jpg',
+            'images/collection4-art6.jpg',
+            'images/collection4-art7.jpg'
+        ];
+
+        let currentIndex = 0;
+
         function openLightbox(imageSrc) {
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
-            lightboxImg.src = imageSrc;
+            currentIndex = images.indexOf(imageSrc);
+            lightboxImg.src = images[currentIndex];
             lightbox.style.display = 'flex';
         }
 
         function closeLightbox() {
             document.getElementById('lightbox').style.display = 'none';
         }
-    </script>
 
+        // Next/Previous buttons
+        document.getElementById('prev').onclick = (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            document.getElementById('lightbox-img').src = images[currentIndex];
+        };
+
+        document.getElementById('next').onclick = (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById('lightbox-img').src = images[currentIndex];
+        };
+    </script>
 </body>
 
 </html>
